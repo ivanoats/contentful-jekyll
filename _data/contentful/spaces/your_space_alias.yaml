@@ -1,0 +1,21 @@
+---
+post:
+- sys:
+    id: 2lHN6GvoSMk6eys8uuKIom
+    created_at: !ruby/object:DateTime 2017-04-16 00:03:03.576000000 Z
+    updated_at: !ruby/object:DateTime 2017-04-16 00:03:43.342000000 Z
+    content_type_id: post
+  title: Meet the Ipsums
+  body: Meet the ipsums is a fun site to get some new boilerplate text for your web
+    designs
+  published_on: !ruby/object:DateTime 2017-04-14 00:00:00.000000000 -05:00
+- sys:
+    id: 4JP4p8pnHaewkkM8yESGEM
+    created_at: !ruby/object:DateTime 2017-04-16 00:05:42.347000000 Z
+    updated_at: !ruby/object:DateTime 2017-04-16 00:05:42.347000000 Z
+    content_type_id: post
+  title: Post Two
+  body: 'This is my second blog post.
+
+'
+  published_on: !ruby/object:DateTime 2017-04-15 00:00:00.000000000 -05:00
