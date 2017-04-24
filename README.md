@@ -44,6 +44,15 @@ Granted, that was the bare minimum. A more robust static site can be built with 
 
 You can preview your new site with `jekyll serve`.
 
+Adjust your `aerobatic.yml` file to push the `_site` directory.
+```yaml
+deploy:
+   directory: _site
+ ---
+```
+
+And re-publish your site with `aero deploy`
+
 ## Getting started with Contentful
 
 - create a post content type with title and body
@@ -52,16 +61,17 @@ You can preview your new site with `jekyll serve`.
 
 ## Integrating Contentful and Jekyll
 
-- edit `Gemfile`
-- create `_config-secret.yml`
+- edit the `Gemfile` to include jekyll-contentful-data-import
+- create `_config-secret.yml` with contentful's spaceId and key
 - run `jeyll contentful` (with secret config)
 - check data files exist
 - transform data files into blog posts with liquid magic
 
 ## Wrapping Up
 
-Where to take it from here?
+Where to take it from here? It's up to you!
 
-- Add advanced features with Aerobatic's [plugins]()
-- Add different content types with Contentful
-- Optimize your site for speed with Pingdom's report
+- Add advanced features with Aerobatic's [plugins](https://www.aerobatic.com/docs/plugins/) For example check out the [form-submit](https://www.aerobatic.com/docs/plugins/form-submit/) plugin to add a contact form to your site.
+ - Add different content types with Contentful
+- Optimize your site for speed with [WebpageTest](https://www.webpagetest.org)
+- Set your site up for [Continuous Integration](https://www.aerobatic.com/docs/static-site-generators/#jekyll)
