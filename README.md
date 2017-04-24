@@ -2,7 +2,7 @@
 
 # Creating Static Sites for clients with Contentful, Aerobatic, and Jekyll
 
-Many small agencies are facing a challenge:  How to create a high-performing web site, while at the same time, let the client edit blog posts and pages.  Fortunately, a combination of services and open-source tools has made this possible now. Contentful provides the web site where content is edited. Jekyll provides the the code that turns content into webpages. And Aerobatic provides the high-performance hosting system. Research has shown that speedy sites translate into more engaged visitors and higher search engine rankings.
+Many small agencies are facing a challenge:  How to create a high-performing web site, while at the same time, let the client edit blog posts and pages.  Fortunately, a combination of services and open-source tools has made this possible now. [Contentful](https://www.contentful.com) provides the web site where content is edited. [Jekyll](https://jekyllrb.com) provides the the code that turns content into webpages. And [Aerobatic](https://www.aerobatic.com) provides the high-performance hosting system. Research has shown that speedy sites translate into more engaged visitors and higher search engine rankings.
 
 What does this all replace? The decade old solution to this has been WordPress, or another PHP based content management system (CMS). But in addition to the code in WordPress showing its age, it may not be the right solution for everyone. The admin interface for WordPress is too complex for many clients. It is powerful, but also gives people "enough rope to hang themselves on". And while WordPress has made progress on core security, the many plugins and their required updates take a lot of time, and introduce potential security risks. To create a WordPress theme, the front-end designer must leave the comfortable world of HTML, CSS, and JavaScript, and also learn some PHP.
 
@@ -15,6 +15,8 @@ Static site generators have recently seen a lot of growth, and for good reason. 
 And most importantly, static sites are simple. They are easier to debug and optimize, because there are fewer "moving parts". For example, on Aerobatic, getting a site online and globally distributed is three steps:
 
 ## Getting started with Aerobatic
+
+[Aerobatic](https://www.aerobatic.com) offers a hosting service specifically tailored to static website publishing, that is simple and powerful.
 
 1. Install NodeJS. If you haven't already, see the [downloads page](https://nodejs.org/en/download/).
 
@@ -31,7 +33,7 @@ npm -g install aerobatic cli
 aero login && aero deploy
 ```
 
-Granted, that was the bare minimum. A more robust static site can be built with a tool called [Jekyll](http://jekyllrb.com) Jekyll was released in May 2013. It is used by thousands, if not tens of thousands of sites. It has the most available themes, currently numbering around XXXX.
+Granted, that was, of course, the bare minimum. A more robust static site can be built with a tool called [Jekyll](http://jekyllrb.com). Jekyll was released in May 2013. It is used by thousands, if not tens of thousands of sites. It has the most available themes, currently numbering around XXXX.
 
 ## Getting started with Jekyll
 
