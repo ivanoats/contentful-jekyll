@@ -1,3 +1,5 @@
+*Work in progress - do not try this yet, incomplete*
+
 # Creating Static Sites for clients with Contentful, Aerobatic, and Jekyll
 
 Many small agencies are facing a challenge:  How to create a high-performing web site, while at the same time, let the client edit blog posts and pages.  Fortunately, a combination of services and open-source tools has made this possible now. Contentful provides the web site where content is edited. Jekyll provides the the code that turns content into webpages. And Aerobatic provides the high-performance hosting system. Research has shown that speedy sites translate into more engaged visitors and higher search engine rankings.
@@ -14,23 +16,26 @@ And most importantly, static sites are simple. They are easier to debug and opti
 
 ## Getting started with Aerobatic
 
-1. Install NodeJS. If you haven't already, see the [downloads page](https://nodejs.org/en/download/)
+1. Install NodeJS. If you haven't already, see the [downloads page](https://nodejs.org/en/download/).
+
 2. Open a command line window and install Aerobatic:
-```npm -g install aerobatic cli```
+```
+npm -g install aerobatic cli
+```
 3. Create an html page. In this example we'll use something ridiculously simple to prove the point.
-<pre>
- <code>
+```html
  echo "<h1>Hello World</h1>" >> index.html
- </code>
-</pre>
+```
 4. Login to Aerobatic and copy the index.html page up to the service:
-```aero login && aero deploy```
+```
+aero login && aero deploy
+```
 
 Granted, that was the bare minimum. A more robust static site can be built with a tool called [Jekyll](http://jekyllrb.com) Jekyll was released in May 2013. It is used by thousands, if not tens of thousands of sites. It has the most available themes, currently numbering around XXXX.
 
 ## Getting started with Jekyll
 
-1. Install Ruby. This is too complex a task to cover in this post, but many of you will already have it installed. If not, see the [installation instructions](https://www.ruby-lang.org/en/documentation/installation/)
+1. Install Ruby. Many of you will already have it installed. If not, see the [installation instructions](https://www.ruby-lang.org/en/documentation/installation/)
 2. Install Jekyll:
 ```gem install jeykll```
 3. Create your Jekyll site:
@@ -38,3 +43,25 @@ Granted, that was the bare minimum. A more robust static site can be built with 
 (Replace mysite with whatever you want)
 
 You can preview your new site with `jekyll serve`.
+
+## Getting started with Contentful
+
+- create a post content type with title and body
+- get your space id
+- get an API key
+
+## Integrating Contentful and Jekyll
+
+- edit `Gemfile`
+- create `_config-secret.yml`
+- run `jeyll contentful` (with secret config)
+- check data files exist
+- transform data files into blog posts with liquid magic
+
+## Wrapping Up
+
+Where to take it from here?
+
+- Add advanced features with Aerobatic's [plugins]()
+- Add different content types with Contentful
+- Optimize your site for speed with Pingdom's report
