@@ -16,7 +16,7 @@ And most importantly, static sites are simple. They are easier to debug and opti
 
 ## Getting started with Aerobatic
 
-[Aerobatic](https://www.aerobatic.com) offers a hosting service specifically tailored to static website publishing, that is simple and powerful.
+[Aerobatic](https://www.aerobatic.com) offers a hosting service specifically tailored to static website publishing. It is simple and powerful.
 
 1. Install NodeJS. If you haven't already, see the [downloads page](https://nodejs.org/en/download/).
 
@@ -33,9 +33,11 @@ npm -g install aerobatic cli
 aero login && aero deploy
 ```
 
-Granted, that was, of course, the bare minimum. A more robust static site can be built with a tool called [Jekyll](http://jekyllrb.com). Jekyll was released in May 2013. It is used by thousands, if not tens of thousands of sites. It has the most available themes, currently numbering around XXXX.
+Granted, that was, of course, the bare minimum. A more robust static site can be built with a tool called [Jekyll](http://jekyllrb.com).
 
 ## Getting started with Jekyll
+
+Jekyll was released in May 2013. It is used by thousands, if not tens of thousands of sites. It has the most available themes, currently numbering several hundred.
 
 1. Install Ruby. Many of you will already have it installed. If not, see the [installation instructions](https://www.ruby-lang.org/en/documentation/installation/)
 2. Install Jekyll:
@@ -57,14 +59,33 @@ And re-publish your site with `aero deploy`
 
 ## Getting started with Contentful
 
-- create a post content type with title and body
-- get your space id
-- get an API key
+We need to create a Contentful space and then add a content type for blog posts. Then add some sample data and get the API info.
+
+1. create a post content type with title and body
+2. get your space id
+3. get an API key
 
 ## Integrating Contentful and Jekyll
 
-- edit the `Gemfile` to include jekyll-contentful-data-import
-- create `_config-secret.yml` with contentful's spaceId and key
+We need to grab Contentful's Jekyll plugin and hook it up to your Contentful account. Then grab the blog posts as JSON, and transform them into HTML markup.
+
+1. Edit the `Gemfile` to include the plugin for integrating with Contentful. Be sure to put it in the `:jekyll_plugins` block.
+```ruby
+group :jekyll_plugins do
+     gem 'jekyll-contentful-data-import'
+end
+```
+
+2. Create a new file called `_config-secret.yml`. Include in that file Contentful's spaceId and API key:
+```yaml
+# replace CHANGME with your API keys
+contentful:
+     spaces:
+      - your_space_alias:
+          space: CHANGEME
+          access_token: CHANGEME
+```
+
 - run `jeyll contentful` (with secret config)
 - check data files exist
 - transform data files into blog posts with liquid magic
